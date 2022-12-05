@@ -27,14 +27,14 @@ For more information, read [this](https://webpack.js.org/concepts/module-federat
 - `index.js` - This file, after being transformed into `main.js`, is used to retrieve remote modules that are required to execute `bootstrap.js`
 - `bootstrap.js` - This is where the work happens, mostly. Dependencies in this file are resolved by the `main.js` file that Webpack outputs.
 
-#### Why two separate files on the host?
-
-It might seem weird that we use one file to simply import another, which contains our business logic. It makes sense that this structure might be used in a larger setup, but why use it in a little sample app? This is how dependencies are resolved - the intermediate step of trying to run one script from another allows the module federation plugin to determine which resources it needs to fetch before running the second script. See lifecycle section below for context.
-
 ### Remote
 
-- `index.js` - This is the script that contains the micro-frontend to be displayed by the container
+- `main.js` - This is the script that contains the micro-frontend to be displayed by the container
 - `manifest.js` - This file is a set of instructions for the consumer on how to get specific exposed resources. For example, a remote source might expose two different modules as part of a micro-frontend; the manifest is requested and then read by the consumer so it knows what is available and how to retrieve it.
+
+### Why use two separate files in the src directories?
+
+It might seem weird that we use one file to simply import another, which contains our business logic. It makes sense that this structure might be used in a larger setup, but why use it in a little sample app? This is how dependencies are resolved - the intermediate, asynchronous step of trying to import one script from another allows the module federation plugin to determine which resources it needs to fetch before running the second script. See lifecycle section below for context.
 
 ## Lifecycle of a request from the host
 

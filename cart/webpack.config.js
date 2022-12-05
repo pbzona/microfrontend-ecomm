@@ -12,7 +12,8 @@ module.exports = {
       filename: 'manifest.js',
       exposes: {
         './CartDetails': './src/index'
-      }
+      },
+      shared: ['faker']
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html'
