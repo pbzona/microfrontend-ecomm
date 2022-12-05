@@ -11,7 +11,7 @@ module.exports = {
       name: 'cart',
       filename: 'manifest.js',
       exposes: {
-        './CartIndex': './src/index'
+        './CartDetails': './src/index'
       }
     }),
     new HtmlWebpackPlugin({
