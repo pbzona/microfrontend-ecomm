@@ -12,7 +12,13 @@ The container is an application that displays the other components - the micro-f
 
 To understand micro-frontends, you must also understand module federation. This project implements it via Webpack and its `ModuleFederationPlugin` but there are plenty of other tools for this as well.
 
+So what is module federation exactly? Taken from the plugin's [documentation](https://webpack.js.org/plugins/module-federation-plugin/):
+
+> The `ModuleFederationPlugin` allows a build to provide or consume modules with other independent builds at runtime.
+
 In this application, the container will be the **host**, while the products and cart frontends will be the **remotes**. In a real world example, the remotes would usually be served by another application rather than living in the same repo.
+
+For more information, read [this](https://webpack.js.org/concepts/module-federation/).
 
 ## What's with all the files?
 
