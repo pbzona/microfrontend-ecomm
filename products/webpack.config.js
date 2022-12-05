@@ -11,7 +11,7 @@ module.exports = {
       name: 'products',
       filename: 'manifest.js',
       exposes: {
-        './ProductsIndex': './src/index'
+        './ProductsIndex': './src/bootstrap'
       },
       shared: ['faker']
     }),
