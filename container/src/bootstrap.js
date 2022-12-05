@@ -1,7 +1,10 @@
-import { mount } from 'products/ProductsIndex';
-import 'cart/CartDetails';
+import { mount as mountProducts } from 'products/ProductsIndex';
+import { mount as mountCart } from 'cart/CartDetails';
 
 console.log('Container');
 
 const productList = document.querySelector('#my-products');
-mount(productList);
+mountProducts(productList);
+
+const cartDetails = document.querySelector('#my-cart');
+mountCart(cartDetails);
