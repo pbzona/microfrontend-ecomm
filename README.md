@@ -4,7 +4,7 @@ This is a mini example of how to implement micro-frontends via module federation
 
 ## Architecture
 
-There are three main components to this app: the container, the products frontend, and the cart frontend.
+There are three main components to this app: the container (sometimes called a "shell"), the products frontend, and the cart frontend.
 
 The container is an application that displays the other components - the micro-frontends - somewhere in its own interface. To do this, it requests the relevant code from the relevant "remote" resources, and the correct assets are served and executed.
 
